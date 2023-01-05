@@ -5,14 +5,14 @@ import {
   BridgeETH,
   BridgeBSC,
   Bridge,
-  TokenETH,
-  TokenBSC,
+  TresLechesChainV3ETH,
+  TresLechesChainV3BSC,
 } from "../../typechain";
 describe("Bridging from ETH to BSC and vice-versa", () => {
   let bscBridge: BridgeBSC,
     ethBridge: BridgeETH,
-    ethToken: TokenETH,
-    bscToken: TokenBSC,
+    ethToken: TresLechesChainV3ETH,
+    bscToken: TresLechesChainV3BSC,
     owner: SignerWithAddress,
     addr1: SignerWithAddress,
     addr2: SignerWithAddress,
@@ -23,10 +23,10 @@ describe("Bridging from ETH to BSC and vice-versa", () => {
 
   beforeEach(async () => {
     [owner, addr1, addr2] = await ethers.getSigners();
-    bscToken = await (await ethers.getContractFactory("TokenBSC"))
+    bscToken = await (await ethers.getContractFactory("TresLechesChainV3BSC"))
       .connect(owner)
       .deploy();
-    ethToken = await (await ethers.getContractFactory("TokenETH"))
+    ethToken = await (await ethers.getContractFactory("TresLechesChainV3ETH"))
       .connect(owner)
       .deploy();
 

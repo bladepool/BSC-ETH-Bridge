@@ -2,7 +2,7 @@ import { ethers, run } from "hardhat";
 
 /*
  If you have contracts with similar byte-codes, you can use the scripts in this format for verification
- npx hardhat verify --network <network-name> <contract-address> --contract "contracts/Tokens/TokenETH.sol:TokenETH(contract file path)" 
+ npx hardhat verify --network <network-name> <contract-address> --contract "contracts/Tokens/TresLechesChainV3ETH.sol:TresLechesChainV3ETH(contract file path)" 
  */
 
 const deployToken = async (token_name: string) => {
@@ -43,8 +43,8 @@ const deployBridgeContracts = async (name: string, token_address: string) => {
 
 async function main() {
   // run the scripts one by one
-  await deployToken("TokenETH");
-  await deployToken("TokenBSC");
+  await deployToken("TresLechesChainV3ETH");
+  await deployToken("TresLechesChainV3BSC");
 
   await deployBridgeContracts("BridgeETH", process.env.ETK_Address!);
   await deployBridgeContracts("BridgeBSC", process.env.BTK_Address!);

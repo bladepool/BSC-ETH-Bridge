@@ -1,6 +1,6 @@
-import { abi as BTKToken } from "../abis/TokenBSC.json";
+import { abi as BTKToken } from "../abis/TresLechesChainV3BSC.json";
 import { abi as BSCBridge } from "../abis/BridgeBSC.json";
-import { abi as ETKToken } from "../abis/TokenETH.json";
+import { abi as ETKToken } from "../abis/TresLechesChainV3ETH.json";
 import { abi as ETHBridge } from "../abis/BridgeETH.json";
 import dotenv from "dotenv";
 

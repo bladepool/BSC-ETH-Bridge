@@ -1288,7 +1288,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
     ) external;
 }
 
-contract TresLechesChainV3 is ERC20, ERC20Burnable, Ownable {
+contract TresLechesChainV3BSC is ERC20, ERC20Burnable, Ownable {
     using Address for address;
 
     event AuditLog(string, address);
