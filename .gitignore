@@ -14,3 +14,6 @@ yarn-error.log
 yarn.lock
 .vscode
 coverage
+bridge-backend/.example.env
+bridge-backend/.example.env
+Bridge-Contracts/.env.example

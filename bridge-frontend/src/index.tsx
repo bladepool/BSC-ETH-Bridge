@@ -7,7 +7,7 @@ import { ChainId, Config, DAppProvider } from "@usedapp/core";
 import { ToastContainer } from "react-toastify";
 
 const config: Config = {
-  supportedChains: [ChainId.Rinkeby, 97],
+  supportedChains: [ChainId.GOERLI, 5],
   notifications: {
     expirationPeriod: 1000,
     checkInterval: 1000,

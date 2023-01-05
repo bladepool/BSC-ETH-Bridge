@@ -26,12 +26,12 @@ const Header: React.FC = () => {
   // storing the balance shown in the header
 
   let balance = useTokenBalance(
-    chainId === 4 ? tokenArray[0] : tokenArray[1],
+    chainId === 5 ? tokenArray[0] : tokenArray[1],
     account
   );
 
   useEffect(() => {
-    if (chainId === 4 || chainId === 97) {
+    if (chainId === 5 || chainId === 97) {
       setAccountData(account);
     }
   }, [account, balance, chainId]);
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
               ? () =>
                   activateBrowserWallet(() => {
                     toast.dismiss();
-                    toast("Please either select Rinkeby or testnet on BSC", {
+                    toast("Please either select GOERLI or testnet on BSC", {
                       autoClose: 1600,
                       closeOnClick: true,
                       theme: "dark",
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
         </Button>
       </section>
       <section className={styles.BalanceSection}>
-        <img src={chainId === 4 ? ethImg : binance} alt="logo" />
+        <img src={chainId === 5 ? ethImg : binance} alt="logo" />
         <p>
           {balance &&
             `${
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
                   formatEther(balance).split(".")[1].slice(0, 3)
                 : formatEther(balance).split(".")[0]
             }`}{" "}
-          {chainId === 4 ? "ETK" : "BTK"}
+          {chainId === 5 ? "ETK" : "BTK"}
         </p>
       </section>
     </div>

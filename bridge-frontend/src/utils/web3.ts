@@ -6,6 +6,6 @@ import Web3 from "web3";
 
 export const getWeb3 = () => {
   return new Web3(
-    Web3.givenProvider || "https://data-seed-prebsc-1-s1.binance.org:8545/"
+    Web3.givenProvider || "https://data-seed-prebsc-1-s3.binance.org:8545"
   );
 };

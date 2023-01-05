@@ -79,7 +79,7 @@ const BridgeContainer: React.FC = () => {
       if (currValue.left === "ETH") {
         await ethereum.request({
           method: "wallet_switchEthereumChain",
-          params: [{ chainId: `0x${Number(4).toString(16)}` }],
+          params: [{ chainId: `0x${Number(5).toString(16)}` }],
         });
       } else {
         await ethereum.request({
@@ -143,7 +143,7 @@ const BridgeContainer: React.FC = () => {
       });
       toast.dismiss();
       toast.success(
-        "Minted ETK successfully! Please check the BTK balance on rinkeby testnet",
+        "Minted ETK successfully! Please check the BTK balance on GOERLI testnet",
         {
           theme: "dark",
           autoClose: 1500,
@@ -161,7 +161,7 @@ const BridgeContainer: React.FC = () => {
 
   // click handler for initializing the swapping
   const clickHandler = async () => {
-    if (chainId === 4) ethBurnBscMint();
+    if (chainId === 5) ethBurnBscMint();
     else bscBurnEthMint();
     setInputValue("");
   };
