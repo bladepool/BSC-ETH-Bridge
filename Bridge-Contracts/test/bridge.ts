@@ -1,20 +1,20 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
-import { BridgeETH, BridgeBSC, TresLechesChainV3ETH, TresLechesChainV3BSC } from "../typechain";
+import { BridgeETH, BridgeBSC, TokenETH, TokenBSC } from "../typechain";
 
 describe("Bridge-Contract testing", function () {
   let bscBridge: BridgeBSC,
     ethBridge: BridgeETH,
-    ethToken: TresLechesChainV3ETH,
-    bscToken: TresLechesChainV3BSC,
+    ethToken: TokenETH,
+    bscToken: TokenBSC,
     owner: SignerWithAddress,
     addr1: SignerWithAddress;
 
   beforeEach(async () => {
     // deploying tokens for the bscBridge and the ethBridge
-    bscToken = await (await ethers.getContractFactory("TresLechesChainV3BSC")).deploy();
-    ethToken = await (await ethers.getContractFactory("TresLechesChainV3ETH")).deploy();
+    bscToken = await (await ethers.getContractFactory("TokenBSC")).deploy();
+    ethToken = await (await ethers.getContractFactory("TokenETH")).deploy();
 
     // deploying the contracts for the ethBridge and the bscBridge
     bscBridge = await (

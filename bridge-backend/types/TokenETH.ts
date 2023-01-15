@@ -44,13 +44,13 @@ export type Transfer = ContractEventLog<{
   2: string;
 }>;
 
-export interface TresLechesChainV3ETH extends BaseContract {
+export interface TokenETH extends BaseContract {
   constructor(
     jsonInterface: any[],
     address?: string,
     options?: ContractOptions
-  ): TresLechesChainV3ETH;
-  clone(): TresLechesChainV3ETH;
+  ): TokenETH;
+  clone(): TokenETH;
   methods: {
     admin(): NonPayableTransactionObject<string>;
 
